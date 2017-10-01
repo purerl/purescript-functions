@@ -3,48 +3,48 @@
 
 % mkFnX - feeling the paren love
 
-mkFn0(F) -> fun () -> F(unit) end.
+mkFn0(Fun) -> fun () -> Fun(unit) end.
 
-mkFn1(F) -> fun (A) -> F(A) end.
+mkFn1(Fun) -> fun (A) -> Fun(A) end.
 
-mkFn2(F) -> fun (A,B) -> (F(A))(B) end.
+mkFn2(Fun) -> fun (A,B) -> (Fun(A))(B) end.
 
-mkFn3(F) -> fun (A,B,C) -> ((F(A))(B))(C) end.
+mkFn3(Fun) -> fun (A,B,C) -> ((Fun(A))(B))(C) end.
 
-mkFn4(F) -> fun (A,B,C,D) -> (((F(A))(B))(C))(D) end.
+mkFn4(Fun) -> fun (A,B,C,D) -> (((Fun(A))(B))(C))(D) end.
 
-mkFn5(F) -> fun (A,B,C,D,E) -> ((((F(A))(B))(C))(D))(E) end.
+mkFn5(Fun) -> fun (A,B,C,D,E) -> ((((Fun(A))(B))(C))(D))(E) end.
 
-mkFn6(F) -> fun (A,B,C,D,E,F) -> (((((F(A))(B))(C))(D))(E))(F) end.
+mkFn6(Fun) -> fun (A,B,C,D,E,F) -> (((((Fun(A))(B))(C))(D))(E))(F) end.
 
-mkFn7(F) -> fun (A,B,C,D,E,F,G) -> ((((((F(A))(B))(C))(D))(E))(F))(G) end.
+mkFn7(Fun) -> fun (A,B,C,D,E,F,G) -> ((((((Fun(A))(B))(C))(D))(E))(F))(G) end.
 
-mkFn8(F) -> fun (A,B,C,D,E,F,G,H) -> (((((((F(A))(B))(C))(D))(E))(F))(G))(H) end.
+mkFn8(Fun) -> fun (A,B,C,D,E,F,G,H) -> (((((((Fun(A))(B))(C))(D))(E))(F))(G))(H) end.
 
-mkFn9(F) -> fun (A,B,C,D,E,F,G,H,I) -> ((((((((F(A))(B))(C))(D))(E))(F))(G))(H))(I) end.
+mkFn9(Fun) -> fun (A,B,C,D,E,F,G,H,I) -> ((((((((Fun(A))(B))(C))(D))(E))(F))(G))(H))(I) end.
 
-mkFn10(F) -> fun (A,B,C,D,E,F,G,H,I,J) -> (((((((((F(A))(B))(C))(D))(E))(F))(G))(H))(I))(J) end.
+mkFn10(Fun) -> fun (A,B,C,D,E,F,G,H,I,J) -> (((((((((Fun(A))(B))(C))(D))(E))(F))(G))(H))(I))(J) end.
 
 % runFnX - making heavy use of auto-currying
 
-runFn0(F) -> F().
+runFn0(Fun) -> Fun().
 
-runFn1(F,A) -> F(A).
+runFn1(Fun,A) -> Fun(A).
 
-runFn2(F,A,B) -> F(A,B).
+runFn2(Fun,A,B) -> Fun(A,B).
 
-runFn3(F,A,B,C) -> F(A,B,C).
+runFn3(Fun,A,B,C) -> Fun(A,B,C).
 
-runFn4(F,A,B,C,D) -> F(A,B,C,D).
+runFn4(Fun,A,B,C,D) -> Fun(A,B,C,D).
 
-runFn5(F,A,B,C,D,E) -> F(A,B,C,D,E).
+runFn5(Fun,A,B,C,D,E) -> Fun(A,B,C,D,E).
 
-runFn6(F,A,B,C,D,E,F) -> F(A,B,C,D,E,F).
+runFn6(Fun,A,B,C,D,E,F) -> Fun(A,B,C,D,E,F).
 
-runFn7(F,A,B,C,D,E,F,G) -> F(A,B,C,D,E,F,G).
+runFn7(Fun,A,B,C,D,E,F,G) -> Fun(A,B,C,D,E,F,G).
 
-runFn8(F,A,B,C,D,E,F,G,H) -> F(A,B,C,D,E,F,G,H).
+runFn8(Fun,A,B,C,D,E,F,G,H) -> Fun(A,B,C,D,E,F,G,H).
 
-runFn9(F,A,B,C,D,E,F,G,H,I) -> F(A,B,C,D,E,F,G,H,I).
+runFn9(Fun,A,B,C,D,E,F,G,H,I) -> Fun(A,B,C,D,E,F,G,H,I).
 
-runFn10(F,A,B,C,D,E,F,G,H,I,J) -> F(A,B,C,D,E,F,G,H,I,J).
+runFn10(Fun,A,B,C,D,E,F,G,H,I,J) -> Fun(A,B,C,D,E,F,G,H,I,J).
